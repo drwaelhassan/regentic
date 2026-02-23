@@ -2,7 +2,7 @@
 
 **SAT-based compliance validation engine** — translating natural language legal text into formal mathematical logic for automated enterprise compliance checking.
 
-Built on the **Governance Analysis Method (GAM)** framework and Giovanni Sartor's *Cognitive Approach to Legal Reasoning*, Regentic bridges the gap between jurisprudence and computational logic using a structured data format called **GAL-JSON** (Governance Analysis Language).
+Built on the **Governance Analysis Method (GAM)** framework by Dr. Waël and Giovanni Sartor's *Cognitive Approach to Legal Reasoning*, Regentic bridges the gap between jurisprudence and computational logic using a structured data format called **GAL-JSON** (Governance Analysis Language).
 
 ---
 
