@@ -5,9 +5,11 @@ import GalJsonViewer from './components/GalJsonViewer.jsx';
 import ValidationResults from './components/ValidationResults.jsx';
 import ComplianceMatrix from './components/ComplianceMatrix.jsx';
 import OntologyBrowser from './components/OntologyBrowser.jsx';
+import LegalLibraryBrowser from './components/LegalLibraryBrowser.jsx';
 
 const NAV_ITEMS = [
     { key: 'dashboard', icon: '📊', label: 'Dashboard' },
+    { key: 'library', icon: '📚', label: 'Legal Library' },
     { key: 'input', icon: '📝', label: 'Input / Extract' },
     { key: 'law-model', icon: '📜', label: 'Law Model (Φ_L)' },
     { key: 'enterprise-model', icon: '🏢', label: 'Enterprise (Φ_E)' },
@@ -43,10 +45,16 @@ export default function App() {
         }
     }, []);
 
+    const handleSelectLaw = useCallback((law) => {
+        setActiveView('input');
+    }, []);
+
     const renderView = () => {
         switch (activeView) {
             case 'dashboard':
                 return <Dashboard onResult={handleResult} lawModel={lawModel} enterpriseModel={enterpriseModel} />;
+            case 'library':
+                return <LegalLibraryBrowser onSelectLaw={handleSelectLaw} />;
             case 'input':
                 return <LawInput onModelLoaded={handleModelLoaded} />;
             case 'law-model':
