@@ -6,10 +6,12 @@ import ValidationResults from './components/ValidationResults.jsx';
 import ComplianceMatrix from './components/ComplianceMatrix.jsx';
 import OntologyBrowser from './components/OntologyBrowser.jsx';
 import LegalLibraryBrowser from './components/LegalLibraryBrowser.jsx';
+import PolicyLibraryBrowser from './components/PolicyLibraryBrowser.jsx';
 
 const NAV_ITEMS = [
     { key: 'dashboard', icon: '📊', label: 'Dashboard' },
     { key: 'library', icon: '📚', label: 'Legal Library' },
+    { key: 'policies', icon: '🏢', label: 'Company Policies' },
     { key: 'input', icon: '📝', label: 'Input / Extract' },
     { key: 'law-model', icon: '📜', label: 'Law Model (Φ_L)' },
     { key: 'enterprise-model', icon: '🏢', label: 'Enterprise (Φ_E)' },
@@ -55,6 +57,8 @@ export default function App() {
                 return <Dashboard onResult={handleResult} lawModel={lawModel} enterpriseModel={enterpriseModel} />;
             case 'library':
                 return <LegalLibraryBrowser onSelectLaw={handleSelectLaw} />;
+            case 'policies':
+                return <PolicyLibraryBrowser onSelectPolicy={handleSelectLaw} />;
             case 'input':
                 return <LawInput onModelLoaded={handleModelLoaded} />;
             case 'law-model':
