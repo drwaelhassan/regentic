@@ -70,7 +70,7 @@ export default function App() {
             <aside className="sidebar">
                 <div className="sidebar-logo">
                     <span className="logo-icon">⚖️</span>
-                    <h1>GAM Engine</h1>
+                    <h1>Regentic</h1>
                 </div>
 
                 <nav className="nav-section">

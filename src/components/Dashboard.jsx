@@ -56,7 +56,7 @@ export default function Dashboard({ onResult, lawModel, enterpriseModel }) {
                     Compliance Dashboard
                 </h2>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-                    Governance Analysis Method — SAT-based compliance validation engine
+                    Regentic — SAT-based compliance validation engine
                 </p>
             </div>
 
